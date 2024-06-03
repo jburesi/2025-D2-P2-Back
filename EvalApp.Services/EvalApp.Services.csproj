@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EvalApp.Repository.Contracts\EvalApp.Repository.Contracts.csproj" />
+    <ProjectReference Include="..\EvalApp.Services.Contracts\EvalApp.Services.Contracts.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EvalApp.Entities\EvalApp.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

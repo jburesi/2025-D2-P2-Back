@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.6">
       <PrivateAssets>all</PrivateAssets>
@@ -21,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EvalApp.Entities\EvalApp.Entities.csproj" />
+    <ProjectReference Include="..\EvalApp.Repository.Contracts\EvalApp.Repository.Contracts.csproj" />
   </ItemGroup>
 
 </Project>
