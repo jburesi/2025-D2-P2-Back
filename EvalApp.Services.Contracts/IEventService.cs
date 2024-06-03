@@ -8,5 +8,7 @@ namespace EvalApp.Services.Contracts
         Task<Event> AddEventAsync(EventDtoDown eventEntity);
 
         Task<List<Event>> GetEventsAsync();
+
+        Task<Event> EditEventAsync(Event eventEntity);
     }
 }

@@ -7,5 +7,7 @@ namespace EvalApp.Repository.Contracts
         Task<Event> AddEventAsync(Event eventEntity);
 
         Task<List<Event>> GetEventsAsync();
+
+        Task<Event> EditEventAsync(Event eventEntity);
     }
 }

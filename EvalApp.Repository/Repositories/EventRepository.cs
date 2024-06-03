@@ -13,6 +13,13 @@ namespace EvalApp.Repository.Repositories
             return savedEvent;
         }
 
+        public async Task<Event> EditEventAsync(Event eventEntity)
+        {
+            Event savedEvent = dbContext.Update(eventEntity).Entity;
+            await dbContext.SaveChangesAsync();
+            return savedEvent;
+        }
+
         public async Task<List<Event>> GetEventsAsync()
         {
             return await dbContext.Events.ToListAsync();

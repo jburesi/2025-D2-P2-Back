@@ -40,6 +40,39 @@ namespace EvalApp.Services
             return await eventRepository.AddEventAsync(eventToAdd);
         }
 
+        public async Task<Event> EditEventAsync(Event eventEntity)
+        {
+            //Event eventToEdit = await eventRepository.GetEventAsync(eventEntity.Id);
+            Event eventToEdit = new();
+
+            if (eventToEdit is null)
+            {
+                throw new ArgumentException("Event not found", nameof(eventEntity.Id));
+            }
+
+            if (string.IsNullOrWhiteSpace(eventEntity.Title))
+            {
+                throw new ArgumentException("Title is required", nameof(eventEntity.Title));
+            }
+
+            if (string.IsNullOrWhiteSpace(eventEntity.Description))
+            {
+                eventEntity.Description = string.Empty;
+            }
+
+            if (eventEntity.Date == default)
+            {
+                throw new ArgumentException("Date is required", nameof(eventEntity.Date));
+            }
+
+            if (string.IsNullOrWhiteSpace(eventEntity.Location))
+            {
+                throw new ArgumentException("Location is required", nameof(eventEntity.Location));
+            }
+
+            return await eventRepository.EditEventAsync(eventEntity);
+        }
+
         public async Task<List<Event>> GetEventsAsync()
         {
             return await eventRepository.GetEventsAsync();
