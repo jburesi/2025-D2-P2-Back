@@ -39,5 +39,10 @@ namespace EvalApp.Services
 
             return await eventRepository.AddEventAsync(eventToAdd);
         }
+
+        public async Task<List<Event>> GetEventsAsync()
+        {
+            return await eventRepository.GetEventsAsync();
+        }
     }
 }
